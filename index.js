@@ -7,7 +7,8 @@ dotenv.config();
 const db = require('./db'); // ← ESTA LÍNEA ES FUNDAMENTAL
 
 app.use(cors({
-  origin: 'http://localhost:5173'
+  origin: 'https://frontend-bd18.vercel.app', // tu dominio exacto de Vercel
+  credentials: true // solo si usas cookies/autenticación
 }));
 
 const authRoutes = require('./routes/auth');

@@ -1,5 +1,5 @@
-require('dotenv').config();
 const { Pool } = require('pg');
+require('dotenv').config();
 
 const db = new Pool({
   host: process.env.DB_HOST,
@@ -8,7 +8,7 @@ const db = new Pool({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   ssl: {
-    rejectUnauthorized: false, // necesario para Supabase
+    rejectUnauthorized: false
   }
 });
 
